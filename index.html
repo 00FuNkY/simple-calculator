@@ -7,29 +7,28 @@
 </head>
 <body>
     <script>
-        let firstValue = +prompt("first value");
-        let operator = prompt("operator");
-        let secondValue = +prompt("second value");
-        switch (operator){
-            case "+":
-            console.log(firstValue + secondValue);
-            break;
-            
-            case "-":
-            console.log(firstValue - secondValue);
-            break;
+        
+        const random = Math.floor(Math.random() * 100) + 1;
+        let playerName = prompt("Type your name here");
 
-            case "*":
-            console.log(firstValue * secondValue);
-            break;
+        guessNumber(random, playerName);
 
-            case "/":
-            console.log(firstValue / secondValue);
-            break;
-
-            default : 
-            throw new Error("Invalid Operator");
+        function guessNumber(numberToGuess, playerName){
+            const playerNumber = +prompt("Please type a number between 1 and 100");
+            if (playerNumber === numberToGuess){
+                console.log(`Yeah ${playerName}, the price is right !!`)
+            }
+            if (numberToGuess > playerNumber){
+                console.log("It is more");
+                guessNumber(numberToGuess, playerName);
+            } else if (numberToGuess < playerNumber){
+                console.log("It is less");
+                guessNumber(numberToGuess, playerName);
+            }
         }
+        
+
+        
 
     </script>
 </body>
