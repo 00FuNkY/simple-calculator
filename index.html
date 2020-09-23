@@ -7,19 +7,13 @@
 </head>
 <body>
     <script>
-        let firstValue = 1;
-        let operator = "+";
-        let secondValue = 2;
-        console.log(firstValue);
-        console.log(operator);
-        console.log(secondValue);
-        firstValue = prompt("Please type first value");
-        operator = prompt("Please type operator here");
-        secondValue = prompt("Please enter the second value here");
-        console.log(firstValue);
-        console.log(operator);
-        console.log(secondValue);
-
+        let firstValue = prompt("first value");
+        let operator = prompt("operator");
+        let secondValue = prompt("second value");
+        console.log(firstValue + secondValue);
+        firstValue = parseInt(firstValue);
+        secondValue = parseInt(secondValue);
+        console.log(firstValue + secondValue);
     </script>
 </body>
 </html>
