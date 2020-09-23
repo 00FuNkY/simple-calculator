@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width, initial-scale=1.0">
+    <meta name="viewport" content="width", initial-scale="1.0">
     <title>Document</title>
 </head>
 <body>
@@ -14,9 +14,21 @@
             case "+":
             console.log(firstValue + secondValue);
             break;
+            
+            case "-":
+            console.log(firstValue - secondValue);
+            break;
+
+            case "*":
+            console.log(firstValue * secondValue);
+            break;
+
+            case "/":
+            console.log(firstValue / secondValue);
+            break;
 
             default : 
-            console.log(firstValue - secondValue);
+            throw new Error("Invalid Operator");
         }
 
     </script>
