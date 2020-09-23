@@ -7,26 +7,18 @@
 </head>
 <body>
     <script>
-        let firstValue = prompt("first value");
+        let firstValue = +prompt("first value");
         let operator = prompt("operator");
-        let secondValue = prompt("second value");
-        console.log(firstValue + secondValue);
-        firstValue = parseInt(firstValue);
-        secondValue = parseInt(secondValue);
-        console.log(firstValue + secondValue);
+        let secondValue = +prompt("second value");
+        switch (operator){
+            case "+":
+            console.log(firstValue + secondValue);
+            break;
 
-        //we can add a + before firstValue and secondValue in the console.log to transform the values 
-        //from string to number
-        // for example : console.log(+firstValue + +secondvalue)
+            default : 
+            console.log(firstValue - secondValue);
+        }
 
-        //we can even do a +before the prompt to have a number directly after the user has put something in the box
-        //that appeared in the browser 
-        // for example : let firstValue = +prompt("First Value")
-
-        //or we can put the prompt("firstValue") in an object and add parseInt before
-        // for example : let firstValue = parseInt({prompt("firstValue")});
-
-        //all those ways can turn a string into a number
     </script>
 </body>
 </html>
